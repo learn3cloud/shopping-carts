@@ -3,7 +3,7 @@ pipeline{
     agent any
 
     tools{
-       maven 'Maven 3.6.3' 
+       maven 'maven' 
     }
     
 
@@ -18,7 +18,7 @@ pipeline{
         stage('test'){
             steps{
                 echo 'this is the test job'
-                sh 'mvn test'
+                sh 'mvn clean test'
               
             }
         }
